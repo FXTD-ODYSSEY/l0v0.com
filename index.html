@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>智伤帝的个人空间</title>
+
+<link rel='stylesheet' href='css/xezbab.css'>
+<link href="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet">
+</head>
+<body>
+
+<h1 class="title">智伤帝个人空间
+  <div class="title_item">
+    <div class="item blog" >我的博客</div>
+    <div class="item pkm" >我的知识库</div>
+    <div class="item about" >我的简历</div>
+  </div>
+</h1>
+ 
+
+<div class="footer">
+    <div class="item site" >粤ICP备19055327号</div>
+    <!-- <a href="https://beian.miit.gov.cn/">粤ICP备19055327号</a> -->
+</div>
+
+<script src='js/xezbab.js'></script>
+<!-- <script src="js/jquery.min.js"></script> -->
+<script src="https://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+  
+  setInterval(() => {
+    r = 150 + Math.floor(Math.random() * 106);
+    g = 150 + Math.floor(Math.random() * 106);
+    b = 150 + Math.floor(Math.random() * 106);
+    color = rgb(r,g,b);
+    $('.title').animate({"color": color},1000)
+
+    $('.item').each(function(){
+      r = 150 + Math.floor(Math.random() * 106);
+      g = 150 + Math.floor(Math.random() * 106);
+      b = 150 + Math.floor(Math.random() * 106);
+      color = rgb(r,g,b);
+      $(this).animate({"color": color},1000)
+    })
+    
+    r = 150 + Math.floor(Math.random() * 106);
+    g = 150 + Math.floor(Math.random() * 106);
+    b = 150 + Math.floor(Math.random() * 106);
+    color = rgb(r,g,b);
+    $('.footer').animate({"color": color},1000)
+
+  }, 1000);
+
+  $('.item').each(function(){
+    r = 150 + Math.floor(Math.random() * 106);
+      g = 150 + Math.floor(Math.random() * 106);
+      b = 150 + Math.floor(Math.random() * 106);
+      color = rgb(r,g,b);
+      $(this).css({"cursor":"pointer","color":color})
+  })
+
+  $(".blog").click(()=>{
+    window.location.href = "https://blog.l0v0.com/"
+  })
+  $(".pkm").click(()=>{
+    window.location.href = "https://tw.l0v0.com/"
+  })
+  $(".about").click(()=>{
+    window.location.href = "https://resume.l0v0.com/"
+  })
+  $(".site").click(()=>{
+    window.location.href = "https://beian.miit.gov.cn/"
+  })
+
+  window.canvasOptions = {
+  	//- autoClear: true,
+  	autoCompensate: false,
+  	autoPushPop: true,
+  	canvas: true,
+  	centered: true,
+  	width: null,
+  	height: null
+  };
+</script>
+
+
+</body>
+
+
+</html>
